@@ -1,3 +1,14 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+
 .contacts {
   width: 100%;
   display: flex;
@@ -8,5 +19,18 @@
 @media screen and (min-width: 728px) {
   .contacts {
     padding: 16px 0;
+  }
+}
+
+.contact__avatar {
+  border-radius: 50px;
+  height: 35px;
+  overflow: hidden;
+  width: 35px;
+  border: 2px solid #9FA9BC;
+  margin-right: 10px;
+
+  & img {
+    height: 100%;
   }
 }

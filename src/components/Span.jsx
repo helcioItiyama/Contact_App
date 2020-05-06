@@ -1,9 +1,9 @@
 import React from 'react';
 import './Span.scss';
 
-function Span(props) {
+function Span({title}) {
   return (
-      <span className="contact__data">{props.title}</span>
+      <span className="contact__data">{title}</span>
   )
 }
 
