@@ -7,6 +7,7 @@ import Span from './Span';
 class Contacts extends React.Component {
 	render() {
 		const { profiles } = this.props;
+
 		
 		return (
 			<div className="container"data-testid="contacts">
@@ -22,7 +23,7 @@ class Contacts extends React.Component {
 				</article>
 
 				{profiles && profiles.map(person => {
-					return<Contact key={person.id} person={person}/>
+					return<Contact key={person.id} data={person}/>
 				})}
 
 			</section>

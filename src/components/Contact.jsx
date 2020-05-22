@@ -6,20 +6,19 @@ import Span from './Span';
 class Contact extends React.Component {
   
   render() {
-    const { person } = this.props;
-    const admission = new Date(person.admissionDate).toLocaleDateString('pt-br')
-    
+    const { data }= this.props;
+    const admission = new Date(data.admissionDate).toLocaleDateString('pt-br')
     return (
       <article className="contact" data-testid="contact">
         <span className="contact__avatar">
-          <img src={person.avatar} alt={person.name}/>
+          <img src={data.avatar} alt={data.name}/>
         </span> 
-        <Span title={person.name}/>
-        <Span title={person.phone}/>
-        <Span title={person.country}/>
+        <Span title={data.name}/>
+        <Span title={data.phone}/>
+        <Span title={data.country}/>
         <Span title={admission}/>
-        <Span title={person.company}/>
-        <Span title={person.department}/>
+        <Span title={data.company}/>
+        <Span title={data.department}/>
       </article> 
     );
   }
